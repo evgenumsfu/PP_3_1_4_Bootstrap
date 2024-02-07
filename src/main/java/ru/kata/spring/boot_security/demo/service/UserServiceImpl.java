@@ -52,7 +52,6 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     }
 
     @Override
-    @Transactional
     public UserDetails loadUserByUsername(String email) {
         User user = userRepository.findByEmail(email);
         if (user == null) {
